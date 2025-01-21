@@ -1,4 +1,5 @@
 # Ramzine
 
-[test](github-images/01.png)
 بازی جورچین با کلمات
+![Image](github-images/01.png)
+
