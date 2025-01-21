@@ -1,0 +1,3245 @@
+<?xml version="1." encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2F79FF"
+        app:tabTextColor="#FFFFFF"
+        app:tabTextAppearance="@style/TitrTablayout"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="جدول" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="کلمات" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstrainLayoutWords"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="@drawable/bk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TabLayout">
+
+        <ListView
+            android:id="@+id/ListViewWords"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConstraintLayoutTable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TabLayout">
+
+        <TextView
+            android:id="@+id/textViewWordMarque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:fontFamily="@font/mitrabold"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/textViewLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titr"
+            android:text="مرحله"
+            android:textColor="#FFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <GridLayout
+            android:id="@+id/GridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/textViewWordMarque"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/textViewLevel">
+
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="@drawable/notchoosen_border"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="1"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="2"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="3"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="4"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="5"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="6"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="7"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="8"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="9"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="10"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="11"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button12"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="12"
+                android:visibility="gone" />
+
+            <!---Row2                     -->
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="13"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button14"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="14"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="15"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="16"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="17"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="18"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="19"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="20"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="21"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="22"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="23"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="24"
+                android:visibility="gone" />
+
+
+            <!---Row3                     -->
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="25"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="26"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="27"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button28"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="28"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button29"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="29"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="30"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button31"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="31"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="32"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button33"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="33"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button34"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="34"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button35"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="35"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button36"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="2"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="36"
+                android:visibility="gone" />
+            <!---Row4                     -->
+            <Button
+                android:id="@+id/button37"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="37"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button38"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="38"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button39"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="39"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button40"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="40"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button41"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="41"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button42"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="42"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button43"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="43"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button44"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="44"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button45"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="45"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button46"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="46"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button47"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="47"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button48"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="3"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="48"
+                android:visibility="gone" />
+            <!---Row5                     -->
+            <Button
+                android:id="@+id/button49"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="49"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button50"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="50"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button51"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="51"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button52"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="52"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button53"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="53"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button54"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="54"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button55"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="55"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button56"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="56"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button57"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="57"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button58"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="58"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button59"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="59"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button60"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="4"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="60"
+                android:visibility="gone" />
+            <!---Row6                     -->
+            <Button
+                android:id="@+id/button61"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="61"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button62"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="62"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button63"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="63"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button64"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="64"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button65"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="65"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button66"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="66"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button67"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="67"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button68"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="68"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button69"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="69"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button70"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="70"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button71"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="71"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button72"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="5"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="72"
+                android:visibility="gone" />
+            <!---Row7                     -->
+            <Button
+                android:id="@+id/button73"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="73"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button74"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="74"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button75"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="75"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button76"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="76"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button77"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="77"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button78"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="78"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button79"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="79"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button80"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="80"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button81"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="81"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button82"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="82"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button83"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="83"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button84"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="6"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="84"
+                android:visibility="gone" />
+            <!---Row8                     -->
+            <Button
+                android:id="@+id/button85"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="85"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button86"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="86"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button87"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="87"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button88"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="88"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button89"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="89"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button90"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="90"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button91"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="91"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button92"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="92"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button93"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="93"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button94"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="94"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button95"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="95"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button96"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="7"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="96"
+                android:visibility="gone" />
+
+            <!---Row9                     -->
+            <Button
+                android:id="@+id/button97"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="97"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button98"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="98"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button99"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="99"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="100"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button101"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="101"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button102"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="102"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button103"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="103"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button104"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="104"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button105"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="105"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button106"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="106"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button107"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="107"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button108"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="8"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="108"
+                android:visibility="gone" />
+            <!---Row10                     -->
+            <Button
+                android:id="@+id/button109"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="109"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button110"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="110"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button111"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="111"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button112"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="112"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button113"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="113"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button114"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="114"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button115"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="115"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button116"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="116"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button117"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="117"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button118"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="118"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button119"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="119"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button120"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="9"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="120"
+                android:visibility="gone" />
+            <!---Row11                     -->
+            <Button
+                android:id="@+id/button121"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="121"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button122"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="122"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button123"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="123"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button124"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="124"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button125"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="125"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button126"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="126"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button127"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="127"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button128"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="128"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button129"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="129"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button130"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="130"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button131"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="131"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button132"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="10"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="132"
+                android:visibility="gone" />
+
+            <!---Row12                     -->
+            <Button
+                android:id="@+id/button133"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="133"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button134"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="134"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button135"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="135"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button136"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="136"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button137"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="137"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button138"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="138"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button139"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="139"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button140"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="140"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button141"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="141"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button142"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="142"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button143"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="143"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button144"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="11"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="144"
+                android:visibility="gone" />
+
+            <!---Row13                     -->
+            <Button
+                android:id="@+id/button145"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="145"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button146"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="146"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button147"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="147"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button148"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="148"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button149"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="149"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button150"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="150"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button151"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="151"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button152"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="152"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button153"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="153"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button154"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="154"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button155"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="155"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button156"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="12"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="156"
+                android:visibility="gone" />
+
+            <!---Row14                     -->
+            <Button
+                android:id="@+id/button157"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="157"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button158"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="158"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button159"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="159"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button160"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="160"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button161"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="161"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button162"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="162"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button163"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="163"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button164"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="164"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button165"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="165"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button166"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="166"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button167"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="167"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button168"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="13"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="168"
+                android:visibility="gone" />
+
+            <!---Row15                     -->
+            <Button
+                android:id="@+id/button169"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="169"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button170"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="170"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button171"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="171"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button172"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="172"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button173"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="173"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button174"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="174"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button175"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="175"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button176"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="176"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button177"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="177"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button178"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="178"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button179"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="179"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button180"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="14"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="180"
+                android:visibility="gone" />
+
+            <!---Row16                     -->
+            <Button
+                android:id="@+id/button181"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="181"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button182"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="182"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button183"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="183"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button184"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="184"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button185"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="185"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button186"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="186"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button187"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="187"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button188"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="188"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button189"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="189"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button190"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="190"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button191"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="191"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button192"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="15"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="192"
+                android:visibility="gone" />
+
+            <!---Row17                     -->
+            <Button
+                android:id="@+id/button193"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="193"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button194"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="194"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button195"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="195"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button196"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="196"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button197"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="197"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button198"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="198"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button199"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="199"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button200"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="200"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button201"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="201"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button202"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="202"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button203"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="203"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button204"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="16"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="204"
+                android:visibility="gone" />
+
+            <!---Row18                     -->
+            <Button
+                android:id="@+id/button205"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="205"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button206"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="206"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button207"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="207"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button208"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="208"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button209"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="197"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button210"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="210"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button211"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="199"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button212"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="212"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button213"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="213"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button214"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="202"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button215"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="215"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button216"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="17"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="216"
+                android:visibility="gone" />
+
+            <!---Row19                     -->
+            <Button
+                android:id="@+id/button217"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="205"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button218"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="206"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button219"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="207"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button220"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="208"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button221"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="197"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button222"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="210"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button223"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="199"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button224"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="212"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button225"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="213"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button226"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="202"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button227"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="215"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button228"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="18"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="228"
+                android:visibility="gone" />
+
+            <!---Row20                     -->
+            <Button
+                android:id="@+id/button229"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="0"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="205"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button230"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="1"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="206"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button231"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="2"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="207"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button232"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="3"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="208"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button233"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="4"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="232"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button234"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="5"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="210"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button235"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="6"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="199"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button236"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="7"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="212"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button237"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="8"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="213"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button238"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="9"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="202"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button239"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="10"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="215"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button240"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="19"
+                android:layout_column="11"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:tag="NotChoosen"
+                android:text="240"
+                android:visibility="gone" />
+
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

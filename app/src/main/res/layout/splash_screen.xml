@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+
+    <ImageView
+        android:id="@+id/imageViewShadyEntertanment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadyentertainment2" />
+
+    <TextView
+        android:id="@+id/textViewLiteV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/imageViewShadyEntertanment"
+        android:fontFamily="@font/titr"
+        android:textColor="#FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/imageViewErfanGhaderi"
+        android:text="نکته : این نسخه برای دستگاه های اندروید پایینتر از 4.4 تولید شده.  در صورت بهره مندی از اندروید بالاتر و برای استفاده از تمامی قابلیت ها و جلوگیری از مشکلات احتمالی از طریق اپلیکیشن کافه بازار اقدام به نصب نسخه اصلی بفرمایید. "
+      />
+
+    <ImageView
+        android:id="@+id/imageViewErfanGhaderi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/programmer" />
+
+    <TextView
+        android:id="@+id/textViewVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewSocialMedia_Insta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewShadyEntertanment"
+        app:srcCompat="@drawable/insta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:visible="false"
+        android:id="@+id/GuideItem"
+        android:title="راهنما" />
+
+    <item
+        android:visible="true"
+        android:id="@+id/BuyItem"
+        android:title="خریداری نسخه کامل" />
+
+    <item
+        android:id="@+id/CheckUpdateItem"
+        android:title="بررسی برای بروزرسانی"
+        android:icon="@drawable/update_color"/>
+
+    <item
+        android:id="@+id/NightModeItem"
+        android:title="حالت شب"
+        android:enabled="false"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/OtherAppsItem"
+        android:title="دیگر بازی های ما"
+        android:icon="@drawable/othetgames_color"/>
+
+    <item
+        android:id="@+id/ContactUsItem"
+        android:title="ارتباط با ما"
+        android:icon="@drawable/contactus_color2"/>
+    </menu>

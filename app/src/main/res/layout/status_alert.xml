@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/ListView_AD"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage_AD">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textViewTitle_AD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/titr"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMessage_AD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:visibility="visible"
+        android:fontFamily="@font/titr"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle_AD" />
+
+    <TextView
+        android:id="@+id/textViewContinue_AD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ادامه"
+        android:textColor="#E91E63"
+        android:fontFamily="@font/titr"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ListView_AD" />
+
+    <TextView
+        android:id="@+id/textViewExit_AD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="خروج"
+        android:textColor="#E91E63"
+        android:fontFamily="@font/titr"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ListView_AD" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
